@@ -1,7 +1,7 @@
 clc
 clear all
 
-mat = rand(3);
+mat = rand(5);
 
 
 %% Cau a
@@ -19,7 +19,7 @@ function [a] = cauA(mat)
             end
         end
     end
-    if k == 1
+    if P == 1
        [a] = "There's no element less than 0.5 in this matrix";
     else
        [a] = P;
@@ -44,7 +44,7 @@ function [M] = sortM(mat)
     M = mat;
     for k = 0:size(M,2)-1
         for l = 1:size(M,2)-k-1
-            if M(l)>M(l+1)
+            if M(l)<M(l+1)
                 temp = M(l);
                 M(l) = M(l+1);
                 M(l+1) = temp;
